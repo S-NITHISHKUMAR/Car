@@ -1,0 +1,18 @@
+using UnityEngine;
+using UnityEngine.UI;
+public class score : MonoBehaviour
+{
+   public Transform MainCamera;
+   public Text scoreText;
+   public static float score1;
+
+
+    // Update is called once per frame
+    void Update()
+    {
+       scoreText.text=MainCamera.position.x.ToString();
+         scoreText.text=car.position.z.ToString();
+         score1=MainCamera.position.x;
+         score1=car.position.z;
+    }
+}
