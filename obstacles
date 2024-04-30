@@ -1,0 +1,21 @@
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class collision : MonoBehaviour
+{
+    private void OnCollisionEnter(Collision collision)
+    {
+       
+        if(collision.collider.CompareTag("next level"))
+        {
+            collision.gameObject.GetComponent<CarController>().enabled = false;
+            Invoke("End",0.5f);
+          
+        }
+    }
+        void End()
+        {
+            SceneManager.LoadSceneAsync("End");
+            
+        }
+} 
